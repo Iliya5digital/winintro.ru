@@ -1,0 +1,316 @@
+﻿<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.en/html/c2afe41c-b845-4623-a445-be6ad0a92ab4.htm"/>
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/c2afe41c-b845-4623-a445-be6ad0a92ab4.htm">
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/c2afe41c-b845-4623-a445-be6ad0a92ab4.htm">
+
+
+
+
+
+<title>Define or Modify Auditing Policy Settings for an Event Category</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/c2afe41c-b845-4623-a445-be6ad0a92ab4.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2Fc2afe41c-b845-4623-a445-be6ad0a92ab4.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>Define or Modify Auditing Policy Settings for an Event Category</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script>
+</p>
+
+<p>By defining auditing settings for specific event categories, you
+can create an auditing policy that suits the security needs of your
+organization. On member servers and workstations that are joined to
+a domain, auditing settings for the event categories are undefined
+by default. On domain controllers, auditing is turned on by
+default. For more information and a list of event categories, see
+<a href="6076bede-08b6-49ac-84fa-f357e341ad96.htm">Audit
+Policies</a>.</p>
+
+<div id="sectionSection0" class="section">
+<ul xmlns="">
+<li class="unordered"><a href="#bkmk_1">For your local
+computer</a><br>
+<br>
+</li>
+
+<li class="unordered"><a href="#bkmk_2">For a domain or
+organizational unit, when you are on a member server or on a
+workstation that is joined to a domain</a><br>
+<br>
+</li>
+</ul>
+
+<div class="subSection" xmlns=""><a name="BKMK_1" xmlns=""></a>
+<div class="subSection" xmlns="">
+<p xmlns="">Local <b>Administrators</b> is the minimum group
+membership required to complete this procedure.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="note" src="../local/procedure.gif">
+</td>
+<td class="procHeadingCell"><b>To define or modify auditing policy
+settings for an event category for your local computer</b>
+</td>
+</tr>
+</table>
+
+<ol class="ordered" xmlns="">
+<li>
+<p xmlns="">Open the Local Security Policy snap-in, and select
+<b>Local Policies</b>.</p>
+</li>
+
+<li>
+<p xmlns="">In the console tree, click <b>Audit Policy</b>.</p>
+
+<p xmlns=""><b>Where?</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered">Security Settings/Local Policies/Audit
+Policy<br>
+<br></li>
+</ul>
+</li>
+
+<li>
+<p xmlns="">In the results pane, double-click an event category
+that you want to change the auditing policy settings for.</p>
+</li>
+
+<li>
+<p xmlns="">Do one or both of the following, and then click
+<b>OK</b>.</p>
+
+<ul xmlns="">
+<li class="unordered">To audit successful attempts, select the
+<b>Success</b> check box.<br>
+<br></li>
+
+<li class="unordered">To audit unsuccessful attempts, select the
+<b>Failure</b> check box.<br>
+<br></li>
+</ul>
+</li>
+</ol>
+
+<p xmlns=""><b>Additional considerations</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered">To open the Local Security Policy snap-in,
+click <b>Start</b>, point to <b>Administrative Tools</b>, and then
+click <b>Local Security Policy</b>.<br>
+<br></li>
+</ul>
+</div>
+<a name="BKMK_2" xmlns=""></a>
+<div class="subSection" xmlns="">
+<p xmlns=""><b>Domain Admins</b> is the minimum group membership
+required to complete this procedure.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="note" src="../local/procedure.gif">
+</td>
+<td class="procHeadingCell"><b>To define or modify auditing policy
+settings for an event category for a domain or organizational unit,
+when you are on a member server or on a workstation that is joined
+to a domain</b>
+</td>
+</tr>
+</table>
+
+<ol class="ordered" xmlns="">
+<li>
+<p xmlns="">If the Group Policy Management Console (GPMC) is not
+installed, open <b>Server Manager</b>, and under <b>Features
+Summary</b>, click <b>Add Features</b>. Select the <b>Group Policy
+Management</b> check box, click <b>Next</b>, and then click
+<b>Install</b>.</p>
+</li>
+
+<li>
+<p xmlns="">After the <b>Installation Results</b> page shows that
+the installation of the GPMC was successful, click
+<b>Close</b>.</p>
+</li>
+
+<li>
+<p xmlns="">Click <b>Start</b>, point to <b>Administrative
+Tools</b>, and then click <b>Group Policy Management</b>.</p>
+</li>
+
+<li>
+<p xmlns="">In the console tree, double-click <b>Group Policy
+objects</b> in the forest and domain containing the <b>Default
+Domain Policy</b> Group Policy object (GPO) that you want to
+edit.</p>
+</li>
+
+<li>
+<p xmlns="">Right-click the <b>Default Domain Policy</b> GPO, and
+then click <b>Edit</b>.</p>
+</li>
+
+<li>
+<p xmlns="">In the GPMC, go to <b>Computer Configuration</b>,
+<b>Windows Settings</b>, <b>Security Settings</b>, and then click
+<b>Audit Policy</b>.</p>
+</li>
+
+<li>
+<p xmlns="">In the results pane, double-click an event category
+that you want to change the auditing policy settings for.</p>
+</li>
+
+<li>
+<p xmlns="">If you are defining auditing policy settings for this
+event category for the first time, select the <b>Define these
+policy settings</b> check box.</p>
+</li>
+
+<li>
+<p xmlns="">Do one or both of the following, and then click
+<b>OK</b>.</p>
+
+<ul xmlns="">
+<li class="unordered">To audit successful attempts, select the
+<b>Success</b> check box.<br>
+<br></li>
+
+<li class="unordered">To audit unsuccessful attempts, select the
+<b>Failure</b> check box.<br>
+<br></li>
+</ul>
+</li>
+</ol>
+
+<p xmlns=""><b>Additional considerations</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered">To open the Microsoft Management Console
+through the Windows interface, click <b>Start</b>, click in the
+<b>Start Search</b> text box, type <b>mmc</b>, and then press
+ENTER.<br>
+<br></li>
+
+<li class="unordered">To audit object access, enable auditing of
+the object access event category by following the steps above.
+Then, enable auditing on the specific object.<br>
+<br></li>
+
+<li class="unordered">After your audit policy is configured, events
+will be recorded in the Security log. Open the Security log to view
+these events.<br>
+<br></li>
+
+<li class="unordered">The default auditing policy setting for
+domain controllers is <b>No Auditing</b>. This means that even if
+auditing is enabled in the domain, the domain controllers do not
+inherit auditing policy locally. If you want domain auditing policy
+to apply to domain controllers, you must modify this policy
+setting.<br>
+<br></li>
+</ul>
+
+<p xmlns=""><b>Additional references</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered"><a href="7b0de306-9880-42ac-861e-e24a0a44398e.htm">Managing Security
+Auditing</a><br>
+<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<hr>
+</div>
+<!--page end-->
+<li class="prev_link"><a href="https://winintro.ru/aclui.en/html/6076bede-08b6-49ac-84fa-f357e341ad96.htm">Audit Policies</a></li>
+<li class="next_link"><a href="https://winintro.ru/aclui.en/html/33049c64-45d1-4b9e-9bed-9bd57d35a131.htm">Apply or Modify Auditing Policy Settings for a Local File or Folder</a></li>
+
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>

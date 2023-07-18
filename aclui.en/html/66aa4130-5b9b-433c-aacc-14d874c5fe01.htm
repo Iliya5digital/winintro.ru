@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.en/html/66aa4130-5b9b-433c-aacc-14d874c5fe01.htm"/>
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/66aa4130-5b9b-433c-aacc-14d874c5fe01.htm">
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/66aa4130-5b9b-433c-aacc-14d874c5fe01.htm">
+
+
+
+
+
+<title>Set, View, Change, or Remove Permissions on Files and Folders</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/66aa4130-5b9b-433c-aacc-14d874c5fe01.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2F66aa4130-5b9b-433c-aacc-14d874c5fe01.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>Set, View, Change, or Remove Permissions on Files and Folders</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script>
+</p>
+
+<p>When a file or folder is created, Windows assigns default
+permissions to that object.</p>
+
+<p><b>Modify</b> is the minimum permission required to complete
+this procedure. Review the details in "Additional considerations"
+in this topic.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0">
+<tr>
+<td class="imgCell"><img class="note" src="../local/procedure.gif">
+</td>
+<td class="procHeadingCell"><b>To set, view, change, or remove
+permissions on files and folders</b>
+</td>
+</tr>
+</table>
+
+<ol class="ordered" xmlns="">
+<li>
+<p xmlns="">Right-click the file or folder for which you want to
+set permissions, click <b>Properties</b>, and then click the
+<b>Security</b> tab.</p>
+</li>
+
+<li>
+<p xmlns="">Click <b>Edit</b> to open the <b>Permissions for
+&lt;Object&gt;</b> dialog box.</p>
+</li>
+
+<li>
+<p xmlns="">Do one of the following:</p>
+
+<ul xmlns="">
+<li class="unordered">To set permissions for a group or user that
+does not appear in the <b>Group or user names</b> box, click
+<b>Add</b>. Type the name of the group or user you want to set
+permissions for, and then click <b>OK</b>.<br>
+<br></li>
+
+<li class="unordered">To change or remove permissions from an
+existing group or user, click the name of the group or user.<br>
+<br></li>
+</ul>
+</li>
+
+<li>
+<p xmlns="">Do one of the following:</p>
+
+<ul xmlns="">
+<li class="unordered">To allow or deny a permission, in the
+<b>Permissions for &lt;User or Group&gt;</b> box, select the
+<b>Allow</b> or <b>Deny</b> check box.<br>
+<br></li>
+
+<li class="unordered">To remove the group or user from the <b>Group
+or user names</b> box, click <b>Remove</b>.<br>
+<br></li>
+</ul>
+</li>
+</ol>
+
+<p><b>Additional considerations</b>
+</p>
+
+<ul>
+<li class="unordered">For a description of all permissions, see
+<a href="4a9b1c9c-8649-4857-8715-b50c3ece6a87.htm">Permission Entry
+Dialog Box</a>.<br>
+<br></li>
+
+<li class="unordered">Performing this procedure might require you
+to elevate permissions through User Account Control.<br>
+<br></li>
+
+<li class="unordered">To open Windows Explorer, click <b>Start</b>,
+point to <b>All Programs</b>, click <b>Accessories</b>, and then
+click <b>Windows Explorer</b>.<br>
+<br></li>
+
+<li class="unordered">You can set file and folder permissions only
+on drives formatted to use NTFS.<br>
+<br></li>
+
+<li class="unordered">To change permissions, you must be the owner
+or have been granted permission to do so by the owner.<br>
+<br></li>
+
+<li class="unordered">Groups or users that are granted Full Control
+permission for a folder can delete files and subfolders within that
+folder, regardless of the permissions that protect the files and
+subfolders.<br>
+<br></li>
+
+<li class="unordered">If the check boxes under <b>Permissions for
+&lt;User or Group&gt;</b> are shaded or if the <b>Remove</b> button
+is unavailable, the file or folder has inherited permissions from
+the parent folder.<br>
+<br></li>
+
+<li class="unordered">When adding a new user or group, by default,
+this user or group will have Read&nbsp;&amp; Execute, List Folder
+Contents, and Read permissions.<br>
+<br></li>
+</ul>
+
+<p><b>Additional references</b>
+</p>
+
+<ul>
+<li class="unordered"><a href="72f8fa57-8cd1-46ae-923a-657a01937941.htm">View Effective
+Permissions on Files and Folders</a><br>
+<br>
+</li>
+
+<li class="unordered"><a href="ea0a7b99-df60-4ca6-91ee-3e39af57836f.htm">Set, View, Change, or
+Remove Special Permissions</a><br>
+<br>
+</li>
+
+<li class="unordered"><a href="d5c47d5f-271d-4863-817c-a9cef4976c47.htm">File and Folder
+Permissions</a><br>
+<br>
+</li>
+</ul>
+</div>
+
+<hr>
+</div>
+<!--page end-->
+<li class="prev_link"><a href="https://winintro.ru/aclui.en/html/a513c103-5b10-46db-a939-018b47d37f15.htm">Set, View, Change, or Remove Permissions on an Object</a></li>
+<li class="next_link"><a href="https://winintro.ru/aclui.en/html/72f8fa57-8cd1-46ae-923a-657a01937941.htm">View Effective Permissions on Files and Folders</a></li>
+
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>

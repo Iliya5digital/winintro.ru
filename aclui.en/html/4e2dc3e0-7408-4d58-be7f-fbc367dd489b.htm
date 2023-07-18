@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.en/html/4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm"/>
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm">
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm">
+
+
+
+
+
+<title>Share and NTFS Permissions on a File Server</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2F4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>Share and NTFS Permissions on a File Server</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script>
+</p>
+
+<p>Access to a folder on a file server can be determined through
+two sets of permission entries: the share permissions set on a
+folder and the NTFS permissions set on the folder (which can also
+be set on files). Share permissions are often used for managing
+computers with FAT32 file systems, or other computers that do not
+use the NTFS file system.</p>
+
+<p>Share permissions and NTFS permissions are independent in the
+sense that neither changes the other. The final access permissions
+on a shared folder are determined by taking into consideration both
+the share permission and the NTFS permission entries. The more
+restrictive permissions are then applied.</p>
+
+<p>The following table suggests equivalent permissions that an
+administrator can grant to the Users group for certain shared
+folder types. Another approach is to set share permissions to Full
+Control for the Everyone group and to rely entirely on NTFS
+permissions to restrict access.</p>
+
+<table>
+<tr>
+<th colspan="1">Folder type</th>
+<th colspan="1">Share permissions</th>
+<th colspan="1">NTFS permissions</th>
+</tr>
+
+<tr>
+<td colspan="1">
+<p><b>Public folder.</b> A folder that can be accessed by
+everyone.</p>
+</td>
+<td colspan="1">
+<p>Grant Change permission to the Users group.</p>
+</td>
+<td colspan="1">
+<p>Grant Modify permission to the Users group.</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p><b>Drop folder</b>. A folder where users can drop confidential
+reports or homework assignments that only the group manager or
+instructor can read.</p>
+</td>
+<td colspan="1">
+<p>Grant Change permission to the Users group.</p>
+
+<p>Grant Full Control permission to the group manager.</p>
+</td>
+<td colspan="1">
+<p>Grant Write permission for the Users group that is applied to
+<b>This Folder only</b>. (This is an option available on the
+<b>Advanced</b> page.)</p>
+
+<p>If each user needs to have certain permissions to the files that
+he or she dropped, you can create a permission entry for the
+Creator Owner well-known security identifier (SID) and apply it to
+<b>Subfolder and files only</b>. For example, you can grant the
+Read and Write permission to the Creator Owner SID on the drop
+folder and apply it to all subfolders and files. This grants the
+user who dropped or created the file (the Creator Owner) the
+ability to read and write to the file. The Creator Owner can then
+access the file through the <b>Run</b> command by using
+<i>\\ServerName\DropFolder\FileName</i>.</p>
+
+<p>Grant Full Control permission to the group manager.</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p><b>Application folder.</b> A folder containing applications that
+can be run over the network.</p>
+</td>
+<td colspan="1">
+<p>Grant Read permission to the Users group.</p>
+</td>
+<td colspan="1">
+<p>Grant Read, Read &amp; Execute, and List Folder Contents
+permissions to the Users group.</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p><b>Home folder.</b> An individual folder for each user. Only the
+user has access to the folder.</p>
+</td>
+<td colspan="1">
+<p>Grant Full Control permission to each user on his or her
+respective folder.</p>
+</td>
+<td colspan="1">
+<p>Grant Full Control permission to each user on his or her
+respective folder.</p>
+</td>
+</tr>
+</table>
+
+<p><b>Additional considerations</b>
+</p>
+
+<ul>
+<li class="unordered">Granting a user Full Control NTFS permission
+on a folder enables that user to take ownership of the folder
+unless the user is restricted in some other way. Be cautious in
+granting Full Control.<br>
+<br></li>
+
+<li class="unordered">If you want to manage folder access by using
+NTFS permissions exclusively, set share permissions to Full Control
+for the Everyone group.<br>
+<br></li>
+
+<li class="unordered">NTFS permissions affect access both locally
+and remotely. NTFS permissions apply regardless of protocol. Share
+permissions, by contrast, apply only to network shares. Share
+permissions do not restrict access to any local user, or to any
+terminal server user, of the computer on which you have set share
+permissions. Thus, share permissions do not provide privacy between
+users on a computer used by several users, nor on a terminal server
+accessed by several users.<br>
+<br></li>
+
+<li class="unordered">By default, the Everyone group does not
+include the Anonymous group, so permissions applied to the Everyone
+group do not affect the Anonymous group.<br>
+<br></li>
+</ul>
+
+<p><b>Additional references</b>
+</p>
+
+<ul>
+<li class="unordered"><a href="24cb5900-6f96-4fd0-bb0c-e3456e1e5f0c.htm">Managing
+Permissions</a><br>
+<br>
+</li>
+</ul>
+</div>
+
+<hr>
+</div>
+<!--page end-->
+<li class="prev_link"><a href="https://winintro.ru/aclui.en/html/d5c47d5f-271d-4863-817c-a9cef4976c47.htm">File and Folder Permissions</a></li>
+<li class="next_link"><a href="https://winintro.ru/aclui.en/html/43111cad-938d-4a92-b67b-d45d54d827d1.htm">Inherited Permissions</a></li>
+
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+﻿<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.en/html/ebfa5c70-6870-4101-839c-dc20ff4ab45c.htm"/>
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/ebfa5c70-6870-4101-839c-dc20ff4ab45c.htm">
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/ebfa5c70-6870-4101-839c-dc20ff4ab45c.htm">
+
+
+
+
+
+<title>How Effective Permissions Are Determined</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/ebfa5c70-6870-4101-839c-dc20ff4ab45c.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2Febfa5c70-6870-4101-839c-dc20ff4ab45c.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>How Effective Permissions Are Determined</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script>
+</p>
+
+<p>Each object has a set of effective permissions associated with
+it. The <b>Effective Permissions</b> tab of the <b>Advanced
+Security Settings</b> property page lists the permissions that
+would be granted to the selected group or user based solely on the
+permissions granted directly through group membership. If you want
+to find out what permissions a user or group has on an object, you
+can use the <a href="#bkmk_1">Effective Permissions Tool</a>.</p>
+
+<h1 class="heading">Factors that are used to determine effective
+permissions</h1>
+
+<div id="sectionSection0" class="section">
+<p xmlns="">The following are used to determine effective
+permissions:</p>
+
+<ul xmlns="">
+<li class="unordered">Global group membership<br>
+<br></li>
+
+<li class="unordered">Local group membership<br>
+<br></li>
+
+<li class="unordered">Local permissions<br>
+<br></li>
+
+<li class="unordered">Local privileges<br>
+<br></li>
+
+<li class="unordered">Universal group membership<br>
+<br></li>
+</ul>
+</div>
+
+<h1 class="heading">Factors that are not used to determine
+effective permissions</h1>
+
+<div id="sectionSection1" class="section">
+<p xmlns="">The following well-known security identifiers (SIDs)
+are not used to determine effective permissions:</p>
+
+<ul xmlns="">
+<li class="unordered">Anonymous Logon<br>
+<br></li>
+
+<li class="unordered">Batch, Creator Group<br>
+<br></li>
+
+<li class="unordered">Dialup<br>
+<br></li>
+
+<li class="unordered">Enterprise Domain Controllers<br>
+<br></li>
+
+<li class="unordered">Interactive<br>
+<br></li>
+
+<li class="unordered">Network<br>
+<br></li>
+
+<li class="unordered">Proxy<br>
+<br></li>
+
+<li class="unordered">Restricted<br>
+<br></li>
+
+<li class="unordered">Remote<br>
+<br></li>
+
+<li class="unordered">Service<br>
+<br></li>
+
+<li class="unordered">System<br>
+<br></li>
+
+<li class="unordered">Terminal Server User<br>
+<br></li>
+
+<li class="unordered">Other Organization<br>
+<br></li>
+
+<li class="unordered">This Organization<br>
+<br></li>
+</ul>
+
+<p xmlns="">Also, share permissions are not part of the effective
+permissions calculation. Access to shares can be denied through
+share permissions even when access is allowed through NTFS
+permissions.</p>
+</div>
+
+<h1 class="heading">Factors that are not used for objects that are
+accessed remotely</h1>
+
+<div id="sectionSection2" class="section">
+<p xmlns="">The following are not used to determine effective
+permissions for objects that are accessed remotely:</p>
+
+<ul xmlns="">
+<li class="unordered">Local group membership<br>
+<br></li>
+
+<li class="unordered">Local privileges<br>
+<br></li>
+
+<li class="unordered">Share permissions<br>
+<br></li>
+</ul>
+
+<p xmlns="">Effective permissions are based on a local evaluation
+of the user's group membership, user privileges, and permissions.
+If the resource being queried is on a remote computer, the
+effective permissions displayed will not include permissions
+granted or denied to the user through the use of a local group on
+the remote computer.</p>
+</div>
+
+<h1 class="heading">Retrieving effective permissions</h1>
+
+<div id="sectionSection3" class="section">
+<p xmlns="">Accurate retrieval of the above information requires
+permission to read the membership information. If the specified
+user or group is a domain object, you must have permission to read
+the object's group information about the domain.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="embedded" src="../local/important.gif">
+</td>
+<td class="txtCell">Important</td>
+</tr>
+
+<tr>
+<td class="imgCell">
+</td>
+<td class="alertCell">
+<ul>
+<li>When you use the <b>Effective Permissions</b> tab to determine
+the permissions that a user has for certain resources in a domain,
+the results that are displayed in the user interface may be
+inconsistent with the actual permissions of the user for that
+resource. This problem occurs when one of the following conditions
+is true:</li>
+
+<li style="list-style: none">
+<ul>
+<li class="unordered">You run the administrative tools remotely
+from the resource server.<br>
+<br></li>
+
+<li class="unordered">The user account that you use to run the
+administrative tools is not in the same domain as the resource.<br>
+<br></li>
+</ul>
+</li>
+
+<li>To avoid this problem, always check effective permissions
+locally on a computer that hosts the resource, and make sure that
+the administrative user account used to run the tool is in the same
+domain as the resource.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<p xmlns="">Here are some relevant default domain permissions:</p>
+
+<ul xmlns="">
+<li class="unordered">Domain administrators have permission to read
+membership information about all objects.<br>
+<br></li>
+
+<li class="unordered">Local administrators on a workstation or
+stand-alone server cannot read membership information for a domain
+user.<br>
+<br></li>
+</ul>
+</div>
+<a name="BKMK_1"></a>
+<h1 class="heading">Effective Permissions tool</h1>
+
+<div id="sectionSection4" class="section">
+<p xmlns="">If you want to find out what permissions a user or
+group has on an object, you can use the Effective Permissions tool.
+It calculates the permissions that are granted to the specified
+user or group. The calculation includes the permissions in effect
+from group membership and any permissions inherited from the parent
+object. It looks up all domain and local groups in which the user
+or group is a member.</p>
+
+<p xmlns="">The Everyone group will always be included, as long as
+the selected user or group is not a member of the Anonymous Logon
+group.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="embedded" src="../local/important.gif">
+</td>
+<td class="txtCell">Important</td>
+</tr>
+
+<tr>
+<td class="imgCell">
+</td>
+<td class="alertCell">
+<ul>
+<li>The Effective Permissions tool only produces an approximation
+of the permissions that a user has. The actual permissions the user
+has may be different because permissions can be granted or denied
+based on how a user logs on. This logon-specific information cannot
+be determined by the Effective Permissions tool if the user is not
+logged on; therefore, the effective permissions it displays reflect
+only those permissions specified by the user or group and not the
+permissions specified by the logon.</li>
+
+<li>For example, if a user is connected to this computer through a
+shared folder, then the logon for that user is marked as a network
+logon. Permissions can be granted or denied to the Network
+well-known SID, which the connected user receives, so a user has
+different permissions when logged on locally than when logged on
+over a network.</li>
+
+<li>For information about granting access for effective
+permissions, see article 331951 in the Microsoft Knowledge Base
+(<a href="http://go.microsoft.com/fwlink/?LinkId=63270" alt=""
+target="_blank">http://go.microsoft.com/fwlink/?LinkId=63270</a>).</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<p xmlns="">For information about using the Effective Permissions
+tool, see <a href="72f8fa57-8cd1-46ae-923a-657a01937941.htm">View
+Effective Permissions on Files and Folders</a>.</p>
+
+<p xmlns=""><b>Additional references</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered"><a href="24cb5900-6f96-4fd0-bb0c-e3456e1e5f0c.htm">Managing
+Permissions</a><br>
+<br>
+</li>
+</ul>
+</div>
+</div>
+
+<hr>
+</div>
+<!--page end-->
+<li class="prev_link"><a href="https://winintro.ru/aclui.en/html/43111cad-938d-4a92-b67b-d45d54d827d1.htm">Inherited Permissions</a></li>
+<li class="next_link"><a href="https://winintro.ru/aclui.en/html/6e91ebf8-2a9a-4e49-9d75-632d56470ac0.htm">Determine Where to Apply Permissions</a></li>
+
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>

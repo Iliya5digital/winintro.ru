@@ -1,0 +1,685 @@
+﻿<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.en/html/92af2cc8-0a54-4284-9c38-eaa1364b20ec.htm"/>
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/92af2cc8-0a54-4284-9c38-eaa1364b20ec.htm">
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/92af2cc8-0a54-4284-9c38-eaa1364b20ec.htm">
+
+
+
+
+
+<title>User Rights and Privileges</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/92af2cc8-0a54-4284-9c38-eaa1364b20ec.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2F92af2cc8-0a54-4284-9c38-eaa1364b20ec.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>User Rights and Privileges</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script>
+</p>
+
+<div id="sectionSection0" class="section">
+<p xmlns="">User rights grant specific privileges and logon rights
+to users and groups in your computing environment. Administrators
+can assign specific rights to group accounts or to individual user
+accounts. These rights authorize users to perform specific actions,
+such as logging on to a system interactively or backing up files
+and directories.</p>
+
+<p xmlns="">To ease the task of user account administration, you
+should assign privileges primarily to group accounts, rather than
+to individual user accounts. When you assign privileges to a group
+account, users are automatically assigned those privileges when
+they become a member of that group. This method of administering
+privileges is far easier than assigning individual privileges to
+each user account when the account is created.</p>
+
+<p xmlns="">The following table lists and describes the privileges
+that can be granted to a user.</p>
+
+<p xmlns="">
+</p>
+
+<table xmlns="">
+<tr>
+<th colspan="1">Privilege</th>
+<th colspan="1">Description</th>
+<th colspan="1">Default setting</th>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Act as part of the operating system</p>
+</td>
+<td colspan="1">
+<p>Allows a process to impersonate any user without authentication.
+The process can therefore gain access to the same local resources
+as that user.</p>
+
+<p>Processes that require this privilege should use the Local
+System account, which already includes this privilege, rather than
+using a separate user account with this privilege specially
+assigned. You do not need to assign this privilege to users unless
+your organization uses servers running Windows&nbsp;2000 or
+Windows&nbsp;NT&nbsp;4.0 and uses applications that exchange
+passwords in plaintext.</p>
+</td>
+<td colspan="1">
+<p>Local System</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Add workstations to a domain</p>
+</td>
+<td colspan="1">
+<p>Determines which groups or users can add workstations to a
+domain.</p>
+
+<p>This user right is valid only on domain controllers. By default,
+any authenticated user has this right and can create up to 10
+computer accounts in the domain.</p>
+
+<p>Adding a computer account to the domain allows the computer to
+recognize accounts and groups that exist in Active Directory Domain
+Services (AD&nbsp;DS).</p>
+</td>
+<td colspan="1">
+<p>Domain controllers: Authenticated Users</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Adjust memory quotas for a process</p>
+</td>
+<td colspan="1">
+<p>Determines who can change the maximum memory that can be
+consumed by a process.</p>
+
+<p>This user right is defined in the Default Domain Controller
+Group Policy object (GPO) and in the local security policy of
+workstations and servers.</p>
+</td>
+<td colspan="1">
+<p>Administrators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Back up files and directories</p>
+</td>
+<td colspan="1">
+<p>Determines which users can bypass file and directory, registry,
+and other persistent object permissions for the purposes of backing
+up the system.</p>
+</td>
+<td colspan="1">
+<p>Administrators and Backup Operators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Bypass traverse checking</p>
+</td>
+<td colspan="1">
+<p>Determines which users can traverse directory trees even though
+the user may not have permissions on the traversed directory. This
+privilege does not allow the user to list the contents of a
+directory, only to traverse directories.</p>
+
+<p>This user right is defined in the Default Domain Controller GPO
+and in the local security policy of workstations and servers.</p>
+</td>
+<td colspan="1">
+<p>Workstations and servers: Administrators, Backup Operators,
+Power Users, Users, and Everyone</p>
+
+<p>Domain controllers: Administrators and Authenticated Users</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Change the system time</p>
+</td>
+<td colspan="1">
+<p>Determines which users and groups can change the time and date
+on the internal clock of the computer. Users that are assigned this
+user right can affect the appearance of event logs. If the system
+time is changed, events that are logged will reflect this new time,
+not the actual time that the events occurred.</p>
+
+<p>This user right is defined in the Default Domain Controller GPO
+and in the local security policy of workstations and servers.</p>
+</td>
+<td colspan="1">
+<p>Workstations and servers: Administrators and Power Users</p>
+
+<p>Domain controllers: Administrators and Server Operators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Create a pagefile</p>
+</td>
+<td colspan="1">
+<p>Allows the user to create and change the size of a paging file.
+This is done by specifying a paging file size for a particular
+drive under <b>Performance Options</b> on the <b>Advanced</b> tab
+of <b>System properties</b>.</p>
+</td>
+<td colspan="1">
+<p>Administrators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Create a token object</p>
+</td>
+<td colspan="1">
+<p>Allows a process to create a token that it can then use to get
+access to any local resources when the process uses
+<b>NtCreateToken()</b> or other token-creation APIs.</p>
+
+<p>Processes requiring this privilege should use the Local System
+account, which already includes this privilege, rather than using a
+separate user account with this privilege specially assigned.</p>
+</td>
+<td colspan="1">
+<p>No one</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Create global objects</p>
+</td>
+<td colspan="1">
+<p>Determines which accounts can create global objects in a
+Terminal Services or Remote Desktop Services session.</p>
+</td>
+<td colspan="1">
+<p>Administrators and Local System</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Create permanent shared objects</p>
+</td>
+<td colspan="1">
+<p>Allows a process to create a directory object in the operating
+system's object manager. This privilege is useful to kernel-mode
+components that extend the object namespace. Components that are
+running in kernel mode already have this privilege inherently; it
+is not necessary to assign them the privilege.</p>
+</td>
+<td colspan="1">
+<p>No one</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Debug programs</p>
+</td>
+<td colspan="1">
+<p>Determines which users can attach a debugger to any process or
+to the kernel. Developers who are debugging their own applications
+do not need to be assigned this user right. Developers who are
+debugging new system components do need to be assigned this user
+right. This user right provides complete access to sensitive and
+critical operating system components.</p>
+</td>
+<td colspan="1">
+<p>Administrators and Local System</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Enable computer and user accounts to be trusted for
+delegation</p>
+</td>
+<td colspan="1">
+<p>Determines which users can set the <b>Trusted for Delegation</b>
+setting on a user or computer object.</p>
+
+<p>The user or object that is granted this privilege must have
+write access to the account control flags on the user or computer
+object. A server process running on a computer (or under a user
+context) that is trusted for delegation can access resources on
+another computer by using the delegated credentials of a client, as
+long as the account of the client does not have the <b>Account
+cannot be delegated</b> account control flag set.</p>
+
+<p>This user right is defined in the Default Domain Controller GPO
+and in the local security policy of workstations and servers.</p>
+</td>
+<td colspan="1">
+<p>Domain controllers: Administrators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Force shutdown from a remote system</p>
+</td>
+<td colspan="1">
+<p>Determines which users are allowed to shut down a computer from
+a remote location on the network. Misuse of this user right can
+result in a denial of service.</p>
+
+<p>This user right is defined in the Default Domain Controller GPO
+and in the local security policy of workstations and servers.</p>
+</td>
+<td colspan="1">
+<p>Workstations and servers: Administrators</p>
+
+<p>Domain controllers: Administrators and Server Operators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Generate security audits</p>
+</td>
+<td colspan="1">
+<p>Determines which accounts can be used by a process to add
+entries to the security log. The security log is used to trace
+unauthorized system access. Misuse of this user right can result in
+the generation of many auditing events, potentially hiding evidence
+of an attack or causing a denial of service if the <b>Audit: Shut
+down system immediately if unable to log security audits</b>
+security policy setting is enabled. For more information, see
+<a href="http://go.microsoft.com/fwlink/?LinkId=136299" alt=""
+target="_blank">Audit: Shut down system immediately if unable to
+log security audits</a>
+(http://go.microsoft.com/fwlink/?LinkId=136299).</p>
+</td>
+<td colspan="1">
+<p>Local System</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Impersonate a client after authentication</p>
+</td>
+<td colspan="1">
+<p>Determines which accounts are allowed to impersonate other
+accounts.</p>
+</td>
+<td colspan="1">
+<p>Administrators and Service</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Increase scheduling priority</p>
+</td>
+<td colspan="1">
+<p>Determines which accounts can use a process with Write property
+access to another process to increase the execution priority
+assigned to the other process. A user with this privilege can
+change the scheduling priority of a process through the Task
+Manager user interface.</p>
+</td>
+<td colspan="1">
+<p>Administrators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Load and unload device drivers</p>
+</td>
+<td colspan="1">
+<p>Determines which users can dynamically load and unload device
+drivers or other code into kernel mode. This user right does not
+apply to Plug and Play device drivers. Because device drivers run
+as trusted (or highly privileged) programs,you should not assign
+this privilege to other users. Instead, use the
+<b>StartService()</b> API.</p>
+</td>
+<td colspan="1">
+<p>Administrators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Lock pages in memory</p>
+</td>
+<td colspan="1">
+<p>Determines which accounts can use a process to keep data in
+physical memory, which prevents the system from paging the data to
+virtual memory on disk. Exercising this privilege could
+significantly affect system performance by decreasing the amount of
+available random access memory (RAM).</p>
+</td>
+<td colspan="1">
+<p>None; certain system processes have the privilege inherently</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Manage auditing and security log</p>
+</td>
+<td colspan="1">
+<p>Determines which users can specify object access auditing
+options for individual resources, such as files, Active Directory
+objects, and registry keys.</p>
+
+<p>This security setting does not allow a user to enable file and
+object access auditing. For such auditing to be enabled, the Audit
+object access setting in Computer Configuration\Windows
+Settings\Security Settings\Local Policies\Audit Policies must be
+configured. For more information, see <a href="http://go.microsoft.com/fwlink/?LinkId=136283" alt="" target="_blank">Audit object access</a>
+(http://go.microsoft.com/fwlink/?LinkId=136283).</p>
+
+<p>You can view audited events in the Security log of the Event
+Viewer. A user with this privilege can also view and clear the
+Security log.</p>
+</td>
+<td colspan="1">
+<p>Administrators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Modify firmware environment values</p>
+</td>
+<td colspan="1">
+<p>Determines who can modify firmware environment values. Firmware
+environment variables are settings stored in the nonvolatile RAM of
+non-x86-based computers. The effect of the setting depends on the
+processor.</p>
+
+<ul>
+<li class="unordered">On x86-based computers, the only firmware
+environment value that can be modified by assigning this user right
+is the <b>Last Known Good Configuration</b> setting, which should
+only be modified by the system.<br>
+<br></li>
+
+<li class="unordered">On Itanium-based computers, boot information
+is stored in nonvolatile RAM. Users must be assigned this user
+right to run Bootcfg.exe and to change the <b>Default Operating
+System</b> setting on <b>Startup and Recovery</b> in <b>System
+properties</b>.<br>
+<br></li>
+
+<li class="unordered">On all computers, this user right is required
+to install or upgrade Windows.<br>
+<br></li>
+</ul>
+</td>
+<td colspan="1">
+<p>Administrators and Local System</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Profile a single process</p>
+</td>
+<td colspan="1">
+<p>Determines which users can use performance monitoring tools to
+monitor the performance of nonsystem processes.</p>
+</td>
+<td colspan="1">
+<p>Administrators, Power Users, and Local System</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Profile system performance</p>
+</td>
+<td colspan="1">
+<p>Determines which users can use performance monitoring tools to
+monitor the performance of system processes.</p>
+</td>
+<td colspan="1">
+<p>Administrators and Local System</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Remove computer from docking station</p>
+</td>
+<td colspan="1">
+<p>Determines whether a user can undock a portable computer from
+its docking station without logging on.</p>
+
+<p>If this policy is enabled, the user must log on before removing
+the portable computer from its docking station. If this policy is
+disabled, the user may remove the portable computer from its
+docking station without logging on.</p>
+</td>
+<td colspan="1">
+<p>Disabled</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Replace a process level token</p>
+</td>
+<td colspan="1">
+<p>Determines which user accounts can initiate a process to replace
+the default token associated with a started subprocess.</p>
+
+<p>This user right is defined in the Default Domain Controller GPO
+and in the local security policy of workstations and servers.</p>
+</td>
+<td colspan="1">
+<p>Local Service and Network Service</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Restore files and directories</p>
+</td>
+<td colspan="1">
+<p>Determines which users can bypass file, directory, registry, and
+other persistent objects permissions when restoring backed up files
+and directories and determines which users can set any valid
+security principal as the owner of an object.</p>
+
+<p>Specifically, this user right is similar to granting the
+following permissions to a user or group on all files and folders
+on the system:</p>
+
+<ul>
+<li class="unordered">Traverse Folder/Execute File<br>
+<br></li>
+
+<li class="unordered">Write<br>
+<br></li>
+</ul>
+</td>
+<td>
+<p>Workstations and servers: Administrators, and Backup
+Operators</p>
+
+<p>Domain controllers: Administrators, Backup Operators, and Server
+Operators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Shut down the system</p>
+</td>
+<td colspan="1">
+<p>Determines which users who are logged on locally to the computer
+can shut down the operating system by using the <b>Shut Down</b>
+command. Misuse of this user right can result in a denial of
+service.</p>
+</td>
+<td>
+<p>Workstations: Administrators, Backup Operators, Power Users, and
+Users</p>
+
+<p>Servers: Administrators, Backup Operators, and Power Users</p>
+
+<p>Domain controllers: Account Operators, Administrators, Backup
+Operators, Server Operators, and Print Operators</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Synchronize directory service data</p>
+</td>
+<td colspan="1">
+<p>Determines which users and groups have the authority to
+synchronize all directory service data. This is also known as
+Active Directory synchronization.</p>
+</td>
+<td colspan="1">
+<p>None</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p>Take ownership of files or other objects</p>
+</td>
+<td colspan="1">
+<p>Determines which users can take ownership of any securable
+object in the system, including Active Directory objects, files and
+folders, printers, registry keys, processes, and threads.</p>
+</td>
+<td>
+<p>Administrators</p>
+</td>
+</tr>
+</table>
+
+<p xmlns="">Some privileges can override permissions set on an
+object. For example, a user logged on to a domain account as a
+member of the Backup Operators group has the right to perform
+backup operations for all domain servers. However, this requires
+the ability to read all files on those servers, even files on which
+their owners have set permissions that explicitly deny access to
+all users, including members of the Backup Operators group. A user
+right—in this case, the right to perform a backup—takes precedence
+over all file and directory permissions. For more information, see
+<a href="http://go.microsoft.com/fwlink/?LinkID=131606" alt=""
+target="_blank">Backup and Recovery</a>
+(http://go.microsoft.com/fwlink/?LinkID=131606).</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="embedded" src="../local/note.gif">
+</td>
+<td class="txtCell">Note</td>
+</tr>
+
+<tr>
+<td class="imgCell">
+</td>
+<td class="alertCell">
+<p>At a command prompt, you can type <b>whoami /priv</b> to see
+your privileges.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<hr>
+</div>
+<!--page end-->
+
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>

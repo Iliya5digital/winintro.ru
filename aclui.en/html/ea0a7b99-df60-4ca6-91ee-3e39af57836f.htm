@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.en/html/ea0a7b99-df60-4ca6-91ee-3e39af57836f.htm"/>
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/ea0a7b99-df60-4ca6-91ee-3e39af57836f.htm">
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/ea0a7b99-df60-4ca6-91ee-3e39af57836f.htm">
+
+
+
+
+
+<title>Set, View, Change, or Remove Special Permissions</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/ea0a7b99-df60-4ca6-91ee-3e39af57836f.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2Fea0a7b99-df60-4ca6-91ee-3e39af57836f.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>Set, View, Change, or Remove Special Permissions</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script>
+</p>
+
+<p>Each object has permissions associated with it that can restrict
+access. You can modify those special permissions to define the
+access on a particular object.</p>
+
+<p>You must be the owner of the object or have been granted
+permission by the owner to complete this procedure. Review the
+details in "Additional considerations" in this topic.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0">
+<tr>
+<td class="imgCell"><img class="note" src="../local/procedure.gif">
+</td>
+<td class="procHeadingCell"><b>To set, view, change, or remove
+special permissions</b>
+</td>
+</tr>
+</table>
+
+<ol class="ordered" xmlns="">
+<li>
+<p xmlns="">Right-click the object on which you want to set
+advanced or special permissions, click <b>Properties</b>, and then
+click the <b>Security</b> tab.</p>
+</li>
+
+<li>
+<p xmlns="">Click <b>Advanced</b>, and then click <b>Change
+Permissions</b>.</p>
+</li>
+
+<li>
+<p xmlns="">On the <b>Permissions</b> tab, do one of the
+following:</p>
+
+<ul xmlns="">
+<li class="unordered">Set special permissions for an additional
+group or user.<br>
+<br>
+Click <b>Add</b>. In <b>Enter the object name to select
+(examples)</b>, type the name of the user or group, and then click
+<b>OK</b>.<br>
+<br></li>
+
+<li class="unordered">View or change special permissions for an
+existing group or user.<br>
+<br>
+Click the name of the group or user, and then click
+<b>Edit</b>.<br>
+<br></li>
+
+<li class="unordered">Remove an existing group or user and its
+special permissions.<br>
+<br>
+Click the name of the group or user, and then click <b>Remove</b>.
+If the <b>Remove</b> button is unavailable, clear the <b>Include
+inheritable permissions from this object's parent</b> check box,
+and then click <b>Remove</b>.<br>
+<br></li>
+</ul>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="embedded" src="../local/caution.gif">
+</td>
+<td class="txtCell">Caution</td>
+</tr>
+
+<tr>
+<td class="imgCell">
+</td>
+<td class="alertCell">
+<p>If you select the <b>Replace all child object permissions with
+inheritable permissions from this object</b> check box, then all
+subfolders and files will have all of their permission entries
+reset to those inheritable from this parent object.</p>
+</td>
+</tr>
+</table>
+</li>
+
+<li>
+<p xmlns="">In the <b>Permissions</b> box, select or clear the
+appropriate <b>Allow</b> or <b>Deny</b> check boxes.</p>
+</li>
+
+<li>
+<p xmlns="">In the <b>Apply onto</b> box, click the folders or
+subfolders you want these permissions to be applied to.</p>
+</li>
+
+<li>
+<p xmlns="">To configure security so that the subfolders and files
+will not inherit these permissions, clear the <b>Apply these
+permissions to objects and/or containers within this container
+only</b> check box.</p>
+</li>
+
+<li>
+<p xmlns="">Click <b>OK</b>, and then, in <b>Advanced Security
+Settings for &lt;ObjectName&gt;</b>, click <b>OK</b>.</p>
+</li>
+</ol>
+
+<p><b>Additional considerations</b>
+</p>
+
+<ul>
+<li class="unordered">Groups or users that have been granted Full
+Control permission for a folder can delete files and subfolders
+within that folder, regardless of the permissions that protect the
+files and subfolders.<br>
+<br></li>
+
+<li class="unordered">Performing this procedure might require you
+to elevate permissions through User Account Control.<br>
+<br></li>
+
+<li class="unordered">To open Windows Explorer, click <b>Start</b>,
+point to <b>All Programs</b>, click <b>Accessories</b>, and then
+click <b>Windows Explorer</b>.<br>
+<br></li>
+
+<li class="unordered">The Everyone group no longer includes the
+Anonymous Logon permission.<br>
+<br></li>
+
+<li class="unordered">If you clear the <b>Include inheritable
+permissions from this object's parent</b> check box, then this file
+or folder will not inherit permission entries from the parent
+object.<br>
+<br></li>
+
+<li class="unordered">You can set NTFS permissions only on drives
+formatted to use NTFS.<br>
+<br></li>
+
+<li class="unordered">If the check boxes under <b>Permissions</b>
+are shaded, the permissions are inherited from the parent
+folder.<br>
+<br></li>
+</ul>
+
+<p><b>Additional references</b>
+</p>
+
+<ul>
+<li class="unordered"><a href="6e91ebf8-2a9a-4e49-9d75-632d56470ac0.htm">Determine Where to Apply
+Permissions</a><br>
+<br>
+</li>
+</ul>
+</div>
+
+<hr>
+</div>
+<!--page end-->
+<li class="prev_link"><a href="https://winintro.ru/aclui.en/html/72f8fa57-8cd1-46ae-923a-657a01937941.htm">View Effective Permissions on Files and Folders</a></li>
+<li class="next_link"><a href="https://winintro.ru/aclui.en/html/fc747cd7-e7ca-4544-b485-3c40230d848c.htm">Set Permissions on a Shared Resource</a></li>
+
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>
