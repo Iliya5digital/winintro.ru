@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.ru/html/4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm"/>
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm">
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm">
+
+
+
+
+
+<title>Разрешения для общего ресурса и разрешения NTFS на файловом сервере</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2F4e2dc3e0-7408-4d58-be7f-fbc367dd489b.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>Разрешения для общего ресурса и разрешения NTFS на файловом
+сервере</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script>
+</p>
+
+<p>Доступ к папке или файловому серверу может определяться двумя
+наборами элементов разрешений: разрешениями для общего ресурса,
+установленными для папки, и разрешениями NTFS, установленными для
+папки (которые можно также установить для файлов). Разрешения для
+общего ресурса часто используются для управления компьютерами с
+файловой системой в формате FAT32 или компьютерами, не
+использующими файловую систему NTFS.</p>
+
+<p>Разрешения для общего ресурса и разрешения NTFS не оказывают
+друг на друга никакого влияния, и в этом смысле они не зависят друг
+от друга. Окончательные разрешения на доступ к общей папке
+определяются с учетом как набора разрешений для общего ресурса, так
+и набора разрешений NTFS. Затем применяются более строгие
+разрешения.</p>
+
+<p>В следующей таблице перечислены равносильные разрешения, которые
+могут быть предоставлены администратором группе «Пользователи» для
+определенных типов общих папок. Другой способ заключается в задании
+разрешений «Полный доступ» для группы «Все», полностью полагаясь на
+ограничения доступа с помощью разрешений NTFS.</p>
+
+<table>
+<tr>
+<th colspan="1">Тип папки</th>
+<th colspan="1">Разрешения для общего ресурса</th>
+<th colspan="1">Разрешения NTFS</th>
+</tr>
+
+<tr>
+<td colspan="1">
+<p><b>Общая папка</b>. Папка, к которой имеют доступ все
+пользователи.</p>
+</td>
+<td colspan="1">
+<p>Разрешение «Изменение» для группы «Пользователи»</p>
+</td>
+<td colspan="1">
+<p>Разрешение «Изменение» для группы «Пользователи»</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p><b>Принимающая папка</b>. Папка, куда пользователи сохраняют
+конфиденциальные отчеты или домашние задания, читать которые может
+только начальник отдела или инструктор.</p>
+</td>
+<td colspan="1">
+<p>Разрешение «Изменение» для группы «Пользователи»</p>
+
+<p>Разрешение «Полный доступ» для начальника отдела</p>
+</td>
+<td colspan="1">
+<p>Разрешение «Запись» для группы «Пользователи», которое
+применяется <b>Только для этой папки</b>. (данный параметр доступен
+на странице <b>Дополнительно</b>.)</p>
+
+<p>Если каждому пользователю требуются особые разрешения для
+файлов, направленных им в эту папку, можно создать набор разрешений
+для идентификатора безопасности «Создатель-владелец» и применять
+его <b>Только для подпапок и файлов</b>. Например, можно
+предоставить разрешения «Чтение» и «Запись» идентификатору
+безопасности «Создатель-владелец» принимающей папки и применить его
+ко всем подпапкам и файлам. Это предоставит пользователю,
+направившему или создавшему файл (т.е. «создателю-владельцу»),
+возможность читать и записывать в файл. «Создатель-владелец» может
+осуществить доступ к файлу с помощью команды <b>Выполнить</b>,
+используя путь <i>\\ServerName\DropFolder\FileName</i>.</p>
+
+<p>Разрешение «Полный доступ» для начальника отдела</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p><b>Папка приложений</b>. Папка, в которой содержатся приложения,
+выполняемые по сети.</p>
+</td>
+<td colspan="1">
+<p>Разрешение «Чтение» для группы «Пользователи»</p>
+</td>
+<td colspan="1">
+<p>Разрешения «Чтение», «Чтение и выполнение» и «Список содержимого
+папки» для группы «Пользователи»</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<p><b>Домашняя папка.</b> Отдельная папка для каждого пользователя.
+Только пользователь имеет доступ к этой папке.</p>
+</td>
+<td colspan="1">
+<p>Разрешение «Полный доступ» к соответствующей папке для каждого
+пользователя.</p>
+</td>
+<td colspan="1">
+<p>Разрешение «Полный доступ» к соответствующей папке для каждого
+пользователя.</p>
+</td>
+</tr>
+</table>
+
+<p><b>Дополнительная информация</b>
+</p>
+
+<ul>
+<li class="unordered">Предоставление пользователю разрешения NTFS
+«Полный доступ» для папки позволяет ему стать владельцем этой
+папки, если соответствующее ограничение не установлено каким-либо
+другим способом. Предоставляя полный доступ к папкам, соблюдайте
+осторожность.<br>
+<br></li>
+
+<li class="unordered">Если требуется управлять доступом к папке
+только с помощью разрешений NTFS, установите для группы «Все»
+разрешение «Полный доступ».<br>
+<br></li>
+
+<li class="unordered">Разрешения NTFS определяют условия как
+локального, так и удаленного доступа. Разрешения NTFS применяются
+независимо от протокола. Разрешения для общего ресурса применяются,
+напротив, только к сетевым ресурсам. Разрешения для общего ресурса
+не ограничивают доступ локальным пользователям или пользователям
+сервера терминалов на компьютере, где были установлены разрешения
+для общего ресурса. Таким образом, разрешения для общего ресурса не
+обеспечивают секретности для пользователей ни на компьютере,
+используемом несколькими пользователями, ни на сервере терминалов,
+к которому имеют доступ несколько пользователей.<br>
+<br></li>
+
+<li class="unordered">По умолчанию, группа «Все» не включает группу
+«Анонимные», поэтому разрешения, установленные для группы «Все», не
+распространяются на группу «Анонимные».<br>
+<br></li>
+</ul>
+
+<p><b>Дополнительные ссылки</b>
+</p>
+
+<ul>
+<li class="unordered"><a href="24cb5900-6f96-4fd0-bb0c-e3456e1e5f0c.htm">Управление
+разрешениями</a><br>
+<br>
+</li>
+</ul>
+</div>
+
+<hr>
+</div>
+<li class="prev_link"><a href="https://winintro.ru/aclui.ru/html/d5c47d5f-271d-4863-817c-a9cef4976c47.htm">Разрешения на файлы и папки</a></li>
+<li class="next_link"><a href="https://winintro.ru/aclui.ru/html/43111cad-938d-4a92-b67b-d45d54d827d1.htm">Наследуемые разрешения</a></li>
+
+<!--page end-->
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>

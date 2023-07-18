@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">
+<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.ru/html/33049c64-45d1-4b9e-9bed-9bd57d35a131.htm"/>
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/33049c64-45d1-4b9e-9bed-9bd57d35a131.htm">
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/33049c64-45d1-4b9e-9bed-9bd57d35a131.htm">
+
+
+
+
+
+<title>Применение и изменение параметров политики аудита для локального файла или папки</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/33049c64-45d1-4b9e-9bed-9bd57d35a131.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2F33049c64-45d1-4b9e-9bed-9bd57d35a131.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>Применение и изменение параметров политики аудита для
+локального файла или папки</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script><style type='text/css'> .block_links * { background:transparent none repeat scroll 0 0 !important; border:medium none !important; clear:none !important; clip:rect(auto, auto, auto, auto) !important; font-size:100% !important; font-style:normal !important; font-variant:normal !important; font-weight:normal !important; height:auto !important; letter-spacing:normal !important; line-height:normal !important; margin:0 !important; overflow:visible !important; padding:0 !important; position:static !important; text-align:left !important; text-decoration:none !important; text-indent:0 !important; text-transform:none !important; vertical-align:baseline !important; visibility:visible !important; white-space:normal !important; width:auto; word-spacing:normal !important; z-index:auto !important; cursor: pointer!important; word-wrap: break-word!important; } .block_links li { display:list-item !important; list-style-image:none !important; list-style-position:outside !important; list-style-type:none !important; display: inline; } .block_links li DIV { padding:0.5em !important; } .block_links DIV, .block_links TABLE { padding: 5px !important; } .block_links { width: auto!important; font-family: Verdana!important; font-size: 11px!important; border: 1px solid #DDDDDD!important; background-color: #FFFFFF!important; padding:5px!important; position: relative!important; display:block!important; -webkit-border-radius:5px !important; -khtml-border-radius:5px !important; -moz-border-radius:5px !important; border-radius:5px !important; } .block_links_icnt, .block_links_icnt * { text-align: left!important; } .block_links_text, .block_links_text A, .block_links_text A:hover { color: #000000!important; font-size: 11px!important; text-decoration: none!important; } .block_links_url { color: #006600!important; font-size: 11px!important; text-decoration: none!important; } .block_links_header, .block_links_header A { color: #000066!important; font-size: 13px!important; font-weight: bold!important; text-decoration: underline!important; } .block_links_sign { color: #999999!important; font-size: 10px!important; text-align: left!important; text-decoration: none!important; } .block_links_clear { clear:both!important; } .block_links TABLE { width: 100%!important; border: 0px!important; } </style><div class='block_links'  > <table> <tr> <td class='block_links_icnt' style='width:100%'> <span onclick='window.open(&#39;https://www.artikul.ru/produktsiya/vizitki/foto-video/dizajn.html&#39;, &#39;_blank&#39;); return false;'><p class='block_links_header'> Креативные визитки дизайнеров </p> <p class='block_links_text'> Шоурум натяжных потолков цены - <a href="https://www.artikul.ru/produktsiya/vizitki/foto-video/dizajn.html" target="_blank">креативные визитки дизайнеров</a>. Платья, аксессуары, флористика. </p><p class='block_links_url'> www.artikul.ru </p></span> </td> </tr> </table></div>
+</p>
+
+<p>Политики аудита можно применять к отдельным файлам или папкам в
+компьютере, устанавливая тип разрешения, чтобы удачные или
+неудачные попытки доступа записывались в журнал безопасности.</p>
+
+<p>Локальный <b>администратор</b> - это минимальная принадлежность
+к группе, необходимая для выполнения данной процедуры. Посмотреть
+подробности можно в пункте «Дополнительные сведения» данного
+раздела.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0">
+<tr>
+<td class="imgCell"><img class="note" src="../local/procedure.gif">
+</td>
+<td class="procHeadingCell"><b>Применение или изменение параметров
+политики аудита для локального файла или папки</b>
+</td>
+</tr>
+</table>
+
+<ol class="ordered" xmlns="">
+<li>
+<p xmlns="">Откройте проводник Windows.</p>
+</li>
+
+<li>
+<p xmlns="">Щелкните правой кнопкой мыши файл или папку, для
+которых требуется проводить аудит, щелкните <b>Свойства</b>, а
+затем вкладку <b>Безопасность</b>.</p>
+</li>
+
+<li>
+<p xmlns="">Щелкните <b>Изменить</b>, а затем
+<b>Дополнительно</b>.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="embedded" src="../local/note.gif">
+</td>
+<td class="txtCell">Примечание</td>
+</tr>
+
+<tr>
+<td class="imgCell">
+</td>
+<td class="alertCell">
+<p>Если вы вошли в систему не как член группы администраторов
+данного компьютера, то нужно указать свои входные учетные данные
+администратора, чтобы продолжить.</p>
+</td>
+</tr>
+</table>
+</li>
+
+<li>
+<p xmlns="">В диалоговом окне <b>Дополнительные параметры
+безопасности для &lt;объект&gt;</b> откройте вкладку
+<b>Аудит</b>.</p>
+</li>
+
+<li>
+<p xmlns="">Выполните одно из следующих действий:</p>
+
+<ul xmlns="">
+<li class="unordered">Чтобы установить аудит для нового
+пользователя или группы, щелкните <b>Добавить</b>. В <b>Введите имя
+выбираемого объекта</b> введите имя нужного пользователя или
+группы, а затем щелкните <b>ОК</b>.<br>
+<br></li>
+
+<li class="unordered">Чтобы отменить аудит для имеющейся группы или
+пользователя, выберите имя группы или пользователя, нажмите кнопку
+<b>Удалить</b>, кнопку <b>ОК</b>, затем пропустите оставшуюся часть
+процедуры.<br>
+<br></li>
+
+<li class="unordered">Чтобы просмотреть или изменить параметры
+аудита для имеющейся группы или пользователя, выберите
+соответствующее имя и нажмите кнопку <b>Изменить</b>.<br>
+<br></li>
+</ul>
+</li>
+
+<li>
+<p xmlns="">В поле <b>Применять</b> выберите место, в котором
+следует проводить аудит.</p>
+</li>
+
+<li>
+<p xmlns="">В поле <b>Доступ</b> укажите, для каких действий
+необходимо проводить аудит, установив соответствующие флажки.</p>
+
+<ul xmlns="">
+<li class="unordered">Чтобы производить аудит успешных событий,
+установите флажок <b>Успех</b>.<br>
+<br></li>
+
+<li class="unordered">Чтобы прекратить аудит успешных событий,
+снимите флажок <b>Успех</b>.<br>
+<br></li>
+
+<li class="unordered">Чтобы производить аудит неудачных событий,
+установите флажок <b>Отказ</b>.<br>
+<br></li>
+
+<li class="unordered">Чтобы прекратить аудит неудачных событий,
+снимите флажок <b>Отказ</b>.<br>
+<br></li>
+
+<li class="unordered">Или, чтобы прекратить аудит всех событий,
+нажмите кнопку <b>Очистить все</b>.<br>
+<br></li>
+</ul>
+</li>
+
+<li>
+<p xmlns="">Если нужно, чтобы последующие файлы и подпапки
+исходного объекта не наследовали данные параметры аудита,
+установите флажок <b>Применять эти записи аудита к объектам и
+контейнерам только внутри этого контейнера</b>.</p>
+</li>
+</ol>
+
+<table class="alertTable" cellspacing="0" cellpadding="0">
+<tr>
+<td class="imgCell"><img class="embedded" src="../local/important.gif">
+</td>
+<td class="txtCell">Важно!</td>
+</tr>
+
+<tr>
+<td class="imgCell">
+</td>
+<td class="alertCell">
+<p>Перед настройкой аудита файлов и папок необходимо включить аудит
+доступа к объектам, установив параметры политики аудита для
+категории событий доступа к объектам. Если аудит доступа к объекту
+не будет включен, при настройке аудита файлов и папок будет выдано
+сообщение об ошибке, а аудит файлов и папок проводиться не
+будет.</p>
+</td>
+</tr>
+</table>
+
+<p><b>Дополнительные сведения</b>
+</p>
+
+<ul>
+<li class="unordered">Для выполнения этой процедуры необходимо
+войти в систему в качестве члена группы администраторов либо иметь
+право <b>Управление аудитом и журналом безопасности</b> в групповой
+политике.<br>
+<br></li>
+
+<li class="unordered">Чтобы открыть проводник Windows, нажмите
+кнопку <b>Пуск</b>, последовательно выберите <b>Все программы</b>,
+<b>Стандартные</b>, а затем - <b>Проводник</b>.<br>
+<br></li>
+
+<li class="unordered">После включения аудита доступа к объектам
+просмотрите результаты изменений в журнале безопасности в программе
+«Просмотр событий».<br>
+<br></li>
+
+<li class="unordered">Настройка аудита файлов и папок возможна
+только на дисках NTFS.<br>
+<br></li>
+
+<li class="unordered">Если отображается один из следующих
+вариантов, значит параметры аудита унаследованы от родительской
+папки.<br>
+<br>
+
+<ul>
+<li class="unordered">В диалоговом окне <b>Аудит записей для
+&lt;файл или папка&gt;</b> в поле <b>Доступ</b> флажки
+недоступны.<br>
+<br></li>
+
+<li class="unordered">В диалоговом окне <b>Дополнительные параметры
+безопасности для &lt;файл или папка&gt;</b> кнопка <b>Удалить</b>
+недоступна.<br>
+<br></li>
+</ul></li>
+
+<li class="unordered">Так как размер журнала безопасности
+ограничен, файлы и папки для проведения аудита следует выбирать
+аккуратно. Также следует решить, какой объем дискового пространства
+следует отвести под хранение журнала безопасности. Максимальный
+размер журнала безопасности задается в программе «Просмотр
+событий».<br>
+<br></li>
+</ul>
+
+<p><b>Дополнительные ссылки</b>
+</p>
+
+<ul>
+<li class="unordered"><a href="7b0de306-9880-42ac-861e-e24a0a44398e.htm">Управление аудитом
+безопасности</a><br>
+<br>
+</li>
+
+<li class="unordered"><a href="49645c80-bcfd-4483-a815-73047bb3d868.htm">Страница свойств
+дополнительных параметров безопасности - вкладка «Аудит»</a><br>
+<br>
+</li>
+</ul>
+</div>
+
+<hr>
+</div>
+<li class="prev_link"><a href="https://winintro.ru/aclui.ru/html/c2afe41c-b845-4623-a445-be6ad0a92ab4.htm">Определение и изменение параметров политики аудита для категории события</a></li>
+<li class="next_link"><a href="https://winintro.ru/aclui.ru/html/b709a6a7-632d-4a29-8f84-3d7c6971ec5f.htm">Просмотр журнала безопасности</a></li>
+
+<!--page end-->
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>

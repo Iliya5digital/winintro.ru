@@ -1,0 +1,354 @@
+﻿<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.ru/html/ebfa5c70-6870-4101-839c-dc20ff4ab45c.htm"/>
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/ebfa5c70-6870-4101-839c-dc20ff4ab45c.htm">
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/ebfa5c70-6870-4101-839c-dc20ff4ab45c.htm">
+
+
+
+
+
+<title>Принцип определения действующих разрешений</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/ebfa5c70-6870-4101-839c-dc20ff4ab45c.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2Febfa5c70-6870-4101-839c-dc20ff4ab45c.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>Принцип определения действующих разрешений</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script>
+</p>
+
+<p>Каждый объект имеет набор связанных с ним действующих
+разрешений. Вкладка <b>Действующие разрешения</b> на странице
+свойств <b>Дополнительные параметры безопасности</b> содержит
+список разрешений, которые будут даны выбранной группе или
+пользователю только на основании членства в группах. Если требуется
+узнать, какими разрешениями для доступа к объекту обладают
+пользователь или группа, можно воспользоваться <a href="#bkmk_1">средством «Действующие разрешения»</a>.</p>
+
+<h1 class="heading">Факторы, используемые для определения
+действующих разрешений</h1>
+
+<div id="sectionSection0" class="section">
+<p xmlns="">Факторы, используемые для определения действующих
+разрешений</p>
+
+<ul xmlns="">
+<li class="unordered">Принадлежность к глобальной группе<br>
+<br></li>
+
+<li class="unordered">Принадлежность к локальным группам<br>
+<br></li>
+
+<li class="unordered">Локальные разрешения<br>
+<br></li>
+
+<li class="unordered">Локальные привилегии<br>
+<br></li>
+
+<li class="unordered">Принадлежность к универсальной группе<br>
+<br></li>
+</ul>
+</div>
+
+<h1 class="heading">Факторы, не используемые для определения
+действующих разрешений</h1>
+
+<div id="sectionSection1" class="section">
+<p xmlns="">Следующие хорошо известные идентификаторы безопасности
+не используются для определения действующих разрешений:</p>
+
+<ul xmlns="">
+<li class="unordered">Анонимный вход<br>
+<br></li>
+
+<li class="unordered">Пакетные файлы, Группа-создатель<br>
+<br></li>
+
+<li class="unordered">Удаленный доступ<br>
+<br></li>
+
+<li class="unordered">Контроллеры домена предприятия<br>
+<br></li>
+
+<li class="unordered">Интерактивный режим<br>
+<br></li>
+
+<li class="unordered">Сеть<br>
+<br></li>
+
+<li class="unordered">Прокси<br>
+<br></li>
+
+<li class="unordered">Ограниченный<br>
+<br></li>
+
+<li class="unordered">Удаленный<br>
+<br></li>
+
+<li class="unordered">Служба<br>
+<br></li>
+
+<li class="unordered">Системный<br>
+<br></li>
+
+<li class="unordered">Пользователь сервера терминалов<br>
+<br></li>
+
+<li class="unordered">Другая организация<br>
+<br></li>
+
+<li class="unordered">Данная организация<br>
+<br></li>
+</ul>
+
+<p xmlns="">При вычислении действующих разрешений также не
+учитываются разрешения общего доступа. Доступ к общим ресурсам
+может быть отклонен по разрешениям для общих ресурсов, даже если
+доступ разрешен разрешениями NTFS.</p>
+</div>
+
+<h1 class="heading">Факторы, которые не используются для объектов
+удаленного доступа</h1>
+
+<div id="sectionSection2" class="section">
+<p xmlns="">Факторы, которые не используются для определения
+действующих разрешений для объектов удаленного доступа.</p>
+
+<ul xmlns="">
+<li class="unordered">Принадлежность к локальным группам<br>
+<br></li>
+
+<li class="unordered">Локальные привилегии<br>
+<br></li>
+
+<li class="unordered">Разрешения для общего ресурса<br>
+<br></li>
+</ul>
+
+<p xmlns="">В основе действующих разрешений лежит локальное
+вычисление принадлежности пользователя к группе, привилегий
+пользователя и разрешений. Если запрашиваемый ресурс находится на
+удаленном компьютере, отображаемые действующие разрешения не
+включают разрешения, предоставленные или запрещенные пользователю в
+соответствии с локальной группой на удаленном компьютере.</p>
+</div>
+
+<h1 class="heading">Получение действующих разрешений</h1>
+
+<div id="sectionSection3" class="section">
+<p xmlns="">Для получения точных данных, перечисленных выше,
+требуется разрешение на чтение сведений о принадлежности к группам.
+Если данные пользователь или группа являются объектами домена,
+необходимо иметь разрешение на чтение сведений группы объекта на
+домене.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="embedded" src="../local/important.gif">
+</td>
+<td class="txtCell">Важно!</td>
+</tr>
+
+<tr>
+<td class="imgCell">
+</td>
+<td class="alertCell">
+<ul>
+<li>Если для определения разрешений пользователя к определенным
+ресурсам домена используется вкладка <b>Действующие разрешения</b>,
+отображаемые в пользовательском интерфейсе результаты могут
+отличаться от фактических разрешений пользователя для данного
+ресурса. Эта проблема возникает при выполнении одного из следующих
+условий.</li>
+
+<li style="list-style: none">
+<ul>
+<li class="unordered">Средства администрирования выполняются
+удаленно с сервера ресурсов.<br>
+<br></li>
+
+<li class="unordered">Учетная запись, используемая для запуска
+средств администрирования, находится не в домене ресурсов.<br>
+<br></li>
+</ul>
+</li>
+
+<li>Чтобы избежать этой проблемы, необходимо всегда локально
+проверять действующие разрешения на компьютере, где размещен
+ресурс, и гарантировать, что для запуска средства используется
+административная учетная запись из того же домена, в котором
+находится ресурс.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<p xmlns="">Ниже приведены некоторые подходящие разрешения домена
+по умолчанию.</p>
+
+<ul xmlns="">
+<li class="unordered">Администраторы домена имеют разрешение на
+чтение сведений о принадлежности к группам для всех объектов.<br>
+<br></li>
+
+<li class="unordered">Локальные администраторы рабочей станции или
+изолированного сервера не имеют разрешения на чтение сведений о
+принадлежности к группам пользователя домена.<br>
+<br></li>
+</ul>
+</div>
+<a name="BKMK_1"></a>
+<h1 class="heading">Средство «Действующие разрешения»</h1>
+
+<div id="sectionSection4" class="section">
+<p xmlns="">Если требуется узнать, какими разрешениями для доступа
+к объекту обладают пользователь или группа, можно воспользоваться
+средством «Действующие разрешения». Это средство вычисляет
+разрешения, предоставленные указанному пользователю или группе. При
+вычислении действующих разрешений принимаются во внимание
+разрешения, обеспечиваемые групповой принадлежностью, а также
+разрешения, унаследованные от родительского объекта. При этом
+просматриваются все домены и локальные группы, к которым
+принадлежит данный пользователь или группа.</p>
+
+<p xmlns="">Группа «Все» принимается во внимание всегда, кроме
+случаев, когда выбранные пользователь или группа принадлежат к
+группе «Анонимный вход».</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="embedded" src="../local/important.gif">
+</td>
+<td class="txtCell">Важно!</td>
+</tr>
+
+<tr>
+<td class="imgCell">
+</td>
+<td class="alertCell">
+<ul>
+<li>Средство «Действующие разрешения» выдает только приблизительный
+набор разрешений пользователя. В действительности список разрешений
+может быть другим, поскольку разрешения предоставляются и
+отменяются в зависимости от способа входа в систему. Сведения о
+входе в систему не могут быть определены средством «Действующие
+разрешения», поскольку пользователь не находится в системе; поэтому
+отображаются только разрешения, назначенные пользователю или
+группе, и не отображаются разрешения, определенные способом входа в
+систему.</li>
+
+<li>Например, если пользователь подключен к компьютеру через общую
+папку, то вход для этого пользователя помечается как сетевой вход.
+Разрешения могут быть даны или отменены в соответствии с известными
+идентификаторами, которые получает подключенный пользователь,
+поэтому пользователь будет обладать различными разрешениями при
+локальном и сетевом входе в систему.</li>
+
+<li>Дополнительные сведения о предоставлении доступа для
+действующих разрешений см. в статье 331951 базы знаний Майкрософт
+(страница может быть на английском языке) (<a href="http://go.microsoft.com/fwlink/?LinkId=63270" alt="" target="_blank">http://go.microsoft.com/fwlink/?linkid=63270</a>).</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<p xmlns="">Сведения об использовании средства «Действующие
+разрешения» см. в разделе<a href="72f8fa57-8cd1-46ae-923a-657a01937941.htm">Просмотр действующих
+разрешений для файлов и папок</a>.</p>
+
+<p xmlns=""><b>Дополнительные ссылки</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered"><a href="24cb5900-6f96-4fd0-bb0c-e3456e1e5f0c.htm">Управление
+разрешениями</a><br>
+<br>
+</li>
+</ul>
+</div>
+</div>
+
+<hr>
+</div>
+<li class="prev_link"><a href="https://winintro.ru/aclui.ru/html/43111cad-938d-4a92-b67b-d45d54d827d1.htm">Наследуемые разрешения</a></li>
+<li class="next_link"><a href="https://winintro.ru/aclui.ru/html/6e91ebf8-2a9a-4e49-9d75-632d56470ac0.htm">Определение применения разрешений</a></li>
+
+<!--page end-->
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>

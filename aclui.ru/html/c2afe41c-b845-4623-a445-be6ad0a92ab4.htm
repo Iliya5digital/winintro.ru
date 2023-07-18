@@ -1,0 +1,325 @@
+﻿<html dir="ltr" xmlns:mshelp="http://msdn.microsoft.com/mshelp"
+xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:tool="http://www.microsoft.com/tooltip">
+<head>
+<meta name="keywords" content="Windows Server 2008 R2, Windows 7" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+<!-- META -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2339592383170032",
+          enable_page_level_ads: true
+     });
+</script>
+<link rel="canonical" href="https://winintro.ru/aclui.ru/html/c2afe41c-b845-4623-a445-be6ad0a92ab4.htm"/>
+<link rel="alternate" hreflang="ru-RU" href="https://winintro.ru/aclui.ru/html/c2afe41c-b845-4623-a445-be6ad0a92ab4.htm">
+<link rel="alternate" hreflang="en-US" href="https://winintro.ru/aclui.en/html/c2afe41c-b845-4623-a445-be6ad0a92ab4.htm">
+
+
+
+
+
+<title>Определение и изменение параметров политики аудита для категории события</title>
+<link rel="stylesheet" type="text/css" href="../local/classic.css">
+<script src="../local/script.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="/files/helpindex.css" type="text/css">
+
+<script type="text/JavaScript" src="/files/supply.js"></script>
+<script type="text/JavaScript">
+helptop.c2wtopf.pageid = "html/c2afe41c-b845-4623-a445-be6ad0a92ab4.htm";
+</script>
+
+</head>
+<body><link href="/files/ext-all.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="print">
+.noprint {display:none; visibility:hidden;}
+</style>
+<style type="text/css" >
+.x-toolbar-left, .x-toolbar-cell, .x-toolbar-right {background-color:transparent;margin:0;padding:0;border:0px none !important;}
+.x-toolbar-right-ct, .x-toolbar-right-ct td {margin:0;padding:0;border:0px none !important;}
+x-btn, .x-btn-over, .x-btn-mc, .x-btn-ml, .x-btn-mr, .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-bl, .x-btn-br, .x-btn-bc {border:0px none !important;}
+</style>
+<div id="x-top-content-panel-01" class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder noprint" style="border-bottom: solid 1px #a9bfd3; display:none;"><div class="x-toolbar x-small-editor x-toolbar-layout-ct"><table class="x-toolbar-ct" style="margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr><td class="x-toolbar-left" align="left" style="width:auto"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-left-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add homebutton" type="button" 
+href="/">
+Home</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon"  onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'"  onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add viewbutton" type="button" 
+href="../index.html?page=html%2Fc2afe41c-b845-4623-a445-be6ad0a92ab4.htm">Change View</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td><td class="x-toolbar-cell"><span class="xtb-sep"></span></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table cellspacing="0" style="width: auto; margin:0px 0px 0px 0px;"><tbody><tr class="x-toolbar-right-row"><td class="x-toolbar-cell"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-btn x-btn-text-icon" onmouseover="this.className='x-btn x-btn-over x-btn-text-icon'" onmouseout="this.className='x-btn x-btn-text-icon'" onmousedown="this.className='x-btn x-btn-click x-btn-text-icon'" onmouseup="this.className='x-btn x-btn-over x-btn-text-icon'" cellspacing="0"><tbody class="x-btn-small x-btn-icon-small-left"><tr><td class="x-btn-tl"><i>&nbsp;</i></td><td class="x-btn-tc"></td><td class="x-btn-tr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-ml"><i>&nbsp;</i></td><td class="x-btn-mc"><em class="" unselectable="on"><a class="x-btn-text add printbutton" type="button" onClick="window.print(); return false;">Print</a></em></td><td class="x-btn-mr"><i>&nbsp;</i></td></tr><tr><td class="x-btn-bl"><i>&nbsp;</i></td><td class="x-btn-bc"></td><td class="x-btn-br"><i>&nbsp;</i></td></tr></tbody></table></td></tr></tbody></table></td><td class="x-toolbar-right" align="right"><table style="width: auto; margin:0px 0px 0px 0px;" class="x-toolbar-right-ct" cellspacing="0"><tbody><tr><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td><table style="width: auto; margin:0px 0px 0px 0px;" cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<script type="text/JavaScript"> 
+if (window.name != "content"){document.getElementById("x-top-content-panel-01").style.display = '';}
+</script>
+
+
+<!--page begin-->
+<div id="header">
+<h1>Определение и изменение параметров политики аудита для
+категории события</h1>
+</div>
+
+<div id="mainSection">
+<div id="mainBody">
+<p class="runningHeader">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Adaptive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2339592383170032"
+     data-ad-slot="9703837508"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script>
+</p>
+
+<p>Путем определения параметров аудита для различных категорий
+событий можно создавать политику аудита, удовлетворяющую всем
+требованиям безопасности организации. На рядовых серверах и рабочих
+станциях, присоединенных к домену, параметры аудита для категорий
+событий по умолчанию не определены. На контроллерах доменов аудит
+включен по умолчанию. Дополнительные сведения и список категорий
+событий см. в разделе <a href="6076bede-08b6-49ac-84fa-f357e341ad96.htm">Политики аудита</a>.</p>
+
+<div id="sectionSection0" class="section">
+<ul xmlns="">
+<li class="unordered"><a href="#bkmk_1">Для локального
+компьютера</a><br>
+<br>
+</li>
+
+<li class="unordered"><a href="#bkmk_2">Для домена или
+подразделения, с рядового сервера или с рабочей станции,
+присоединенной к домену</a><br>
+<br>
+</li>
+</ul>
+
+<div class="subSection" xmlns=""><a name="BKMK_1" xmlns=""></a>
+<div class="subSection" xmlns="">
+<p xmlns="">Локальный <b>администратор</b> - это минимальная
+принадлежность к группе, необходимая для выполнения данной
+процедуры.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="note" src="../local/procedure.gif">
+</td>
+<td class="procHeadingCell"><b>Чтобы определить или изменить
+параметры политики аудита для категории событий на локальном
+компьютере</b>
+</td>
+</tr>
+</table>
+
+<ol class="ordered" xmlns="">
+<li>
+<p xmlns="">Откройте оснастку «Локальная политика безопасности» и
+выберите элемент <b>Локальные политики</b>.</p>
+</li>
+
+<li>
+<p xmlns="">В дереве консоли щелкните узел <b>Политика
+аудита</b>.</p>
+
+<p xmlns=""><b>Расположение</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered">Параметры безопасности/Локальные
+политики/Политика аудита<br>
+<br></li>
+</ul>
+</li>
+
+<li>
+<p xmlns="">На панели результатов дважды щелкните категорию
+событий, для которой требуется изменить параметры политики
+аудита.</p>
+</li>
+
+<li>
+<p xmlns="">Выполните одно или оба следующих действия и нажмите
+кнопку <b>ОК</b>.</p>
+
+<ul xmlns="">
+<li class="unordered">Чтобы производить аудит успешных попыток,
+установите флажок <b>Успех</b> .<br>
+<br></li>
+
+<li class="unordered">Чтобы производить аудит неудачных попыток,
+установите флажок <b>Отказ</b> .<br>
+<br></li>
+</ul>
+</li>
+</ol>
+
+<p xmlns=""><b>Прочие вопросы</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered">Чтобы открыть оснастку «Локальная политика
+безопасности», нажмите кнопку <b>Пуск</b>, последовательно выберите
+<b>Администрирование</b>, <b>Локальная политика
+безопасности</b>.<br>
+<br></li>
+</ul>
+</div>
+<a name="BKMK_2" xmlns=""></a>
+<div class="subSection" xmlns="">
+<p xmlns="">Минимальным требованием для выполнения данной процедуры
+является членство в группе <b>Администраторы домена</b>.</p>
+
+<table class="alertTable" cellspacing="0" cellpadding="0" xmlns="">
+<tr>
+<td class="imgCell"><img class="note" src="../local/procedure.gif">
+</td>
+<td class="procHeadingCell"><b>Чтобы определить или изменить
+параметры политики аудита для категории событий для домена или
+подразделения с рядового сервера или с рабочей станции,
+подключенной к домену</b>
+</td>
+</tr>
+</table>
+
+<ol class="ordered" xmlns="">
+<li>
+<p xmlns="">Если консоль управления групповыми политиками не
+установлена, откройте <b>Диспетчер сервера</b> и щелкните
+<b>Добавить функции</b> в разделе <b>Сводка функций</b>. Установите
+флажок <b>Управление групповой политикой</b> , нажмите кнопку
+<b>Далее</b>, а затем кнопку <b>Установить</b>.</p>
+</li>
+
+<li>
+<p xmlns="">После того, как на странице <b>Результаты установки</b>
+появится сообщение об успешной установке консоли управления
+групповой политикой (GPMC), нажмите кнопку <b>Закрыть</b>.</p>
+</li>
+
+<li>
+<p xmlns="">Нажмите кнопку <b>Пуск</b>, выделите пункт
+<b>Администрирование</b> и выберите команду <b>Управление групповой
+политикой</b>.</p>
+</li>
+
+<li>
+<p xmlns="">В дереве консоли дважды щелкните узел <b>Объекты
+групповой политики</b> в лесу и домене, содержащем объект групповой
+политики (GPO) <b>Политика домена по умолчанию</b>, который
+требуется изменить.</p>
+</li>
+
+<li>
+<p xmlns="">Щелкните объект <b>Политика домена по умолчанию</b>
+правой кнопкой мыши и выберите команду <b>Изменить</b>.</p>
+</li>
+
+<li>
+<p xmlns="">В консоли управления групповыми политиками щелкните
+<b>Конфигурация компьютера</b>, <b>Параметры Windows</b>,
+<b>Настройка безопасности</b>, а затем - <b>Политика
+аудита</b>.</p>
+</li>
+
+<li>
+<p xmlns="">На панели результатов дважды щелкните категорию
+событий, для которой требуется изменить параметры политики
+аудита.</p>
+</li>
+
+<li>
+<p xmlns="">Если параметры политики аудита для данной категории
+событий настраиваются впервые, установите флажок <b>Определить
+следующие параметры политики</b>.</p>
+</li>
+
+<li>
+<p xmlns="">Выполните одно или оба следующих действия и нажмите
+кнопку <b>ОК</b>.</p>
+
+<ul xmlns="">
+<li class="unordered">Чтобы производить аудит успешных попыток,
+установите флажок <b>Успех</b>.<br>
+<br></li>
+
+<li class="unordered">Чтобы производить аудит неудачных попыток,
+установите флажок <b>Отказ</b>.<br>
+<br></li>
+</ul>
+</li>
+</ol>
+
+<p xmlns=""><b>Дополнительная информация</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered">Чтобы открыть консоль управления через
+интерфейс Windows, нажмите кнопку <b>Пуск</b>, щелкните в текстовом
+поле <b>Начать поиск</b>, введите <b>mmc</b> и нажмите клавишу
+ВВОД.<br>
+<br></li>
+
+<li class="unordered">Чтобы провести аудит доступа к объекту,
+включите аудит категории событий доступа к объекту, выполнив
+приведенные выше действия. Затем включите аудит указанного
+объекта.<br>
+<br></li>
+
+<li class="unordered">После настройки политики аудита события будут
+заноситься в журнал безопасности. Просмотреть эти события можно в
+журнале безопасности.<br>
+<br></li>
+
+<li class="unordered">По умолчанию параметр политики аудита для
+контроллеров домена имеет значение <b>Нет аудита</b>. Это значит,
+что, если даже аудит включен в домене, контроллеры домена не
+наследуют политику аудита локально. Чтобы применить политику аудита
+домена к контроллерам домена, необходимо изменить параметры
+политики.<br>
+<br></li>
+</ul>
+
+<p xmlns=""><b>Дополнительные ссылки</b>
+</p>
+
+<ul xmlns="">
+<li class="unordered"><a href="7b0de306-9880-42ac-861e-e24a0a44398e.htm">Управление аудитом
+безопасности</a><br>
+<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<hr>
+</div>
+<li class="prev_link"><a href="https://winintro.ru/aclui.ru/html/6076bede-08b6-49ac-84fa-f357e341ad96.htm">Политики аудита</a></li>
+<li class="next_link"><a href="https://winintro.ru/aclui.ru/html/33049c64-45d1-4b9e-9bed-9bd57d35a131.htm">Применение и изменение параметров политики аудита для локального файла или папки</a></li>
+
+<!--page end-->
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (helptop.c2wtopf.jstree != null)) {
+  if (helptop.c2wtopf.FITEMS[helptop.c2wtopf.pagenum] != helptop.c2wtopf.pageid)
+	helptop.c2wtopf.jstree.OpenTreeNode("" + helptop.c2wtopf.pageid);
+}
+</script>
+
+
+
+</body>
+</html>
